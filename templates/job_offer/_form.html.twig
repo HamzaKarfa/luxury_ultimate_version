@@ -1,0 +1,79 @@
+<div class="container">
+     {{ form_start(form) }}
+                    <div class="row">
+                      <h3 class="text-extrabold">Information about your job offer</h3>
+                        <div class="col s12">
+                            <div class="input-field">
+                             {{ form_label(form.jobTitle, 'Job Title', {
+                                'label_attr': {'class': 'active'}
+                            }) }}
+                             {{ form_widget(form.jobTitle) }}
+                            </div>
+                             <div class='red-text'>{{ form_errors(form.jobTitle)}}</div>
+                        </div>
+
+                        <div class="col s12">
+                            <div class="input-field">
+                             {{ form_label(form.description, 'Description') }}
+                            {{ form_widget(form.description) }}
+                            </div>
+                            <div class='red-text'>{{ form_errors(form.description)}}</div>
+                        </div>
+
+                        <div class="col s12 m6">
+                          <p class="labelJob">Job Starting Date</p>
+                           {# {{ form_label(form.startingDate, 'Job Starting Date') }}#}
+                            {{ form_widget(form.startingDate) }}
+                            
+                            <div class='red-text'>{{ form_errors(form.startingDate)}}</div>
+                        </div>
+
+                        <div class="col s12 m6">
+                            <p class="labelJob">Job Closing Date</p>
+                            {#{{ form_label(form.closingDate, 'Job Closing Date') }}#}
+                            {{ form_widget(form.closingDate) }}
+                         
+                            <div class='red-text'>{{ form_errors(form.closingDate)}}</div>
+                        </div>
+                        
+                        <div class="col s12 m4">
+                            <div class="input-field">
+                            {{ form_label(form.salary, 'Salary 💵') }}
+                            {{ form_widget(form.salary) }}
+                            </div>
+                            <div class='red-text'>{{ form_errors(form.salary)}}</div>    
+                        </div>
+
+                        <div class="col s12 m8">
+                            <div class="input-field">
+                            {{ form_label(form.location, 'Job Location') }}
+                            {{ form_widget(form.location) }}
+                            </div>
+                            <div class='red-text'>{{ form_errors(form.location)}}</div>
+                        </div>
+                     
+                        <div class="col s12 m6">
+                           <p class="labelJob">Job Category</p>
+                            {#{{ form_label(form.jobCategory, 'Job Category') }}#}
+                            {{ form_widget(form.jobCategory) }}
+                            
+                            <div class='red-text'>{{ form_errors(form.jobCategory)}}</div>    
+                        </div>
+
+                         <div class="col s12 m6">
+                           <p class="labelJob">Job Type</p>
+                            {#{{ form_label(form.jobType, 'Job Type') }}#}
+                            {{ form_widget(form.jobType) }}
+                            
+                            <div class='red-text'>{{ form_errors(form.jobCategory)}}</div>    
+                        </div>
+
+                        <div class="col s12 center"></br>
+                          <button  type='submit' class="btn  gradient secondary waves-effect waves-light">
+                                <span><strong>UPDATE</strong> NOW</span>
+                        </button>
+                        </div>
+                    </div>
+
+{{ form_end(form) }}
+</div>

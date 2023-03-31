@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New JobType{% endblock %}
+
+{% block body %}
+
+<div class="base">
+    <div class="page">
+        <section class="padding-top-160 padding-bottom-80">
+            <div class="container">
+            <h2 class="center-align"> Add new Job Category</h2>
+                {{ include('job_type/_form.html.twig') }} 
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}
+{% block stylesheets %}
+    <style> .footer{
+        display:none;
+    }
+    </style>
+{% endblock %}
+
